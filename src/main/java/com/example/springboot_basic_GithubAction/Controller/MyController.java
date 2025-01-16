@@ -12,14 +12,14 @@ public class MyController {
     {
         return "Hello! This is for Basic Github Action";
     }
-    @RequestMapping("/name")
+    @RequestMapping("/name/{name}")
     public String byName(@PathVariable String name)
     {
-        return "Hello from"+name;
+        return "Hello from "+name;
     }
-    @RequestMapping("/name/age")
+    @RequestMapping("/{name}/{age}")
     public String byNameAge(@PathVariable String name,@PathVariable int age)
     {
-        return "Hello! This is "+name+"and i am "+age+"years old";
+        return "Hello! This is "+name+" and i am "+age+" years old ";
     }
 }
